@@ -38,6 +38,7 @@ _platform_map = {
             {"name": "hummer-24811-sun-overlay.dtbo"},
             {"name": "pagani-24821-sun-overlay.dtbo"},
             {"name": "pagani-24875-sun-overlay.dtbo"},
+            {"name": "piloti-24620-sun-overlay.dtbo"},
         ],
         "binary_compatible_with": ["tuna", "kera"],
     },

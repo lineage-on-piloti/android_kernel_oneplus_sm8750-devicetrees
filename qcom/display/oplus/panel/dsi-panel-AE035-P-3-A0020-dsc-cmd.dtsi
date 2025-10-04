@@ -649,10 +649,10 @@
 						39 00 00 40 00 00 04 FF 5A A5 06
 						15 00 00 40 00 00 02 A0 00
 						39 00 00 40 00 00 04 FF 5A A5 22
-						39 00 00 40 00 00 08 D8 00 DA 11 10 32 14 14
-						39 00 00 40 00 00 08 D9 00 DA 11 10 32 14 14
-						39 00 00 40 00 00 08 DA 00 DA 11 10 32 14 14
-						39 00 00 40 00 00 08 DB 00 DA 11 10 32 14 14
+						39 00 00 40 00 00 08 D8 00 DB 11 10 32 14 14
+						39 00 00 40 00 00 08 D9 00 DB 11 10 32 14 14
+						39 00 00 40 00 00 08 DA 00 DB 11 10 32 14 14
+						39 00 00 40 00 00 08 DB 00 DB 11 10 32 14 14
 						39 00 00 40 00 00 0A DC 84 94 BB 00 20 C4 A1 CC 10
 						15 00 00 40 00 00 02 DD 01
 						15 00 00 40 00 00 02 DE F1
@@ -1506,10 +1506,10 @@
                                                 39 00 00 40 00 00 04 FF 5A A5 06
                                                 15 00 00 40 00 00 02 A0 00
 						39 00 00 40 00 00 04 FF 5A A5 22
-                                                39 00 00 40 00 00 08 D8 00 DA 11 10 32 14 14
-                                                39 00 00 40 00 00 08 D9 00 DA 11 10 32 14 14
-                                                39 00 00 40 00 00 08 DA 00 DA 11 10 32 14 14
-                                                39 00 00 40 00 00 08 DB 00 DA 11 10 32 14 14
+                                                39 00 00 40 00 00 08 D8 00 DB 11 10 32 14 14
+                                                39 00 00 40 00 00 08 D9 00 DB 11 10 32 14 14
+                                                39 00 00 40 00 00 08 DA 00 DB 11 10 32 14 14
+                                                39 00 00 40 00 00 08 DB 00 DB 11 10 32 14 14
                                                 39 00 00 40 00 00 0A DC 84 94 BB 00 20 C4 A1 CC 10
                                                 15 00 00 40 00 00 02 DD 01
                                                 15 00 00 40 00 00 02 DE F1
@@ -2329,10 +2329,10 @@
 						39 00 00 40 00 00 04 FF 5A A5 01
 						15 00 00 40 00 00 02 FB 08
 						39 00 00 40 00 00 04 FF 5A A5 22
-                                                39 00 00 40 00 00 08 D8 00 DA 11 10 32 14 14
-                                                39 00 00 40 00 00 08 D9 00 DA 11 10 32 14 14
-                                                39 00 00 40 00 00 08 DA 00 DA 11 10 32 14 14
-                                                39 00 00 40 00 00 08 DB 00 DA 11 10 32 14 14
+                                                39 00 00 40 00 00 08 D8 00 DB 11 10 32 14 14
+                                                39 00 00 40 00 00 08 D9 00 DB 11 10 32 14 14
+                                                39 00 00 40 00 00 08 DA 00 DB 11 10 32 14 14
+                                                39 00 00 40 00 00 08 DB 00 DB 11 10 32 14 14
                                                 39 00 00 40 00 00 0A DC 84 94 BB 00 20 C4 A1 CC 10
                                                 15 00 00 40 00 00 02 DD 01
                                                 15 00 00 40 00 00 02 DE F1
@@ -3176,10 +3176,10 @@
 						39 00 00 40 00 00 04 FF 5A A5 01
 						15 00 00 40 00 00 02 FB 08
 						39 00 00 40 00 00 04 FF 5A A5 22
-                                                39 00 00 40 00 00 08 D8 00 DA 11 10 32 14 14
-                                                39 00 00 40 00 00 08 D9 00 DA 11 10 32 14 14
-                                                39 00 00 40 00 00 08 DA 00 DA 11 10 32 14 14
-                                                39 00 00 40 00 00 08 DB 00 DA 11 10 32 14 14
+                                                39 00 00 40 00 00 08 D8 00 DB 11 10 32 14 14
+                                                39 00 00 40 00 00 08 D9 00 DB 11 10 32 14 14
+                                                39 00 00 40 00 00 08 DA 00 DB 11 10 32 14 14
+                                                39 00 00 40 00 00 08 DB 00 DB 11 10 32 14 14
                                                 39 00 00 40 00 00 0A DC 84 94 BB 00 20 C4 A1 CC 10
                                                 15 00 00 40 00 00 02 DD 01
                                                 15 00 00 40 00 00 02 DE F1
@@ -3493,7 +3493,7 @@
 	//oplus,pwm-switch-restore-support;
 	//oplus,pwm-switch-backlight-threshold = <1087>;
 	//oplus,pwm-create-thread-disable-duty;
-	//oplus,cmdq-sync-support;
+	//oplus,cmdq-pack-support;
 	//oplus,dp-enabled;
 };
 
@@ -3510,12 +3510,8 @@
 		Bit6: sending extend cmd while panel power on accroding to current pwm mode
 		Bit7: sending extend cmd while timing switch accroding to current pwm pulse level
 		Bit8: sending extend cmd after sending dbv threshold cmd in another thread
-		...
-		Bit24:support pwm mode0
-		Bit25:support pwm mode1
-		Bit25:support pwm mode2
 	*/
-	oplus,pwm-switch-config = <0x03000087>;
+	oplus,pwm-switch-config = <0x87>;
 	/*	oplus,pwm-switch-mode0-states-info/oplus,pwm-switch-mode1-states-info:
 		Specific dbv threshold and pulse info of 2 pwm mode, for pulse, 0 symbols 1pulse,
 		1symbols 3pulse and 2 symbols 18pulse. The format should be 1 dbv threshold info with

@@ -20,6 +20,8 @@ OPLUS_SUN_BOARDS += hummer-24811-sun-overlay.dtbo
 else ifeq ($(CONFIG_PAGANI_DTB),y)
 OPLUS_SUN_BOARDS += pagani-24821-sun-overlay.dtbo\
                     pagani-24875-sun-overlay.dtbo
+else ifeq ($(CONFIG_PILOTI_DTB),y)
+OPLUS_SUN_BOARDS += piloti-24620-sun-overlay.dtbo
 endif
 
 dtb-y += $(OPLUS_SUN_BOARDS) $(SUN_BASE_DTB)

@@ -23,3 +23,5 @@ dtbo-$(CONFIG_ARCH_SUN)   += oplus/pagani-camera-overlay-T0.dtbo \
 
 dtbo-$(CONFIG_ARCH_SUN)   += oplus/paganiIn-camera-overlay-T0.dtbo \
 
+dtbo-$(CONFIG_ARCH_SUN)   += oplus/piloti-camera-overlay-T0.dtbo \
+			     oplus/piloti-camera-overlay-evb.dtbo \
