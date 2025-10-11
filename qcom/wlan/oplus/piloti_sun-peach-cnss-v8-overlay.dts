@@ -1,0 +1,11 @@
+/dts-v1/;
+/plugin/;
+
+#include <dt-bindings/oplus/hw-id.h>
+#include "piloti_sun-peach-cnss-v8-overlay.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Sun SoCs, piloti";
+
+	oplus,project-id = <24620>;
+};
